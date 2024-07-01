@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesCifrado.css">
     <title>Caesar Cipher</title>
 </head>
 <header>
@@ -15,10 +16,21 @@
             <div><a href="#">Coming soon</a></div>
             <div><a href="#">Coming soon</a></div>
         </div>
-        
     </nav>
 </header>
 <body>
+    <div class="contenido">
+        <h1 class="titulo">Cifrado César</h1>
+        <div class="inputs">
+            <input id="input-text" type="text" placeholder="Introduce texto" required>
+        </div>
+        <div class="botonSubmit">
+            <button id="encrypt-button" type="button">Cifrar</button>
+        </div>
+        <p class="resultado">Texto cifrado: <span id="encrypted-text"></span></p>
+    </div>
+
+    <script src="js/cifradoCesar.js"></script>
     
 </body>
 </html>

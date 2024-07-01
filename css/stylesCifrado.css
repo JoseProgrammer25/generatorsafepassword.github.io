@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* Estilo general de la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #494949;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: #333333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+nav .logo {
+    font-size: 34px;
+    margin-left: 30px;
+}
+
+nav .logo a {
+    text-decoration: none;
+}
+
+nav .barnav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-right: 30px;
+}
+
+nav .barnav div {
+    padding: 10px 20px;
+}
+
+nav .barnav div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav .barnav div:hover {
+    cursor: pointer;
+    background: rgb(182, 221, 255);
+}
+
+nav .barnav .signup:hover  {
+    background: #aff1a2;
+}
+
+/* Estilo general de la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #494949;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Estilo de la caja contenedora */
+.contenido {
+    background-color: #c8f396;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo del título */
+.titulo {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del input */
+.inputs {
+    margin-bottom: 20px;
+}
+
+#input-text {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo del botón */
+.botonSubmit {
+    margin-bottom: 20px;
+}
+
+#encrypt-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#encrypt-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del resultado */
+.resultado {
+    font-weight: bold;
+    color: #333333;
+}
