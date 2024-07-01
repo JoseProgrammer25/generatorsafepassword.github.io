@@ -1,7 +1,14 @@
 @charset "utf-8";
 
+/* Estilo general de la página */
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: #494949;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 nav {
@@ -27,7 +34,7 @@ nav .logo a {
 
 nav .barnav {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
     margin-right: 30px;
 }
 
@@ -49,51 +56,92 @@ nav .barnav .signup:hover  {
     background: #aff1a2;
 }
 
+
+
+/* Estilo de la caja contenedora */
+.contenido {
+    background-color: #c8f396;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Estilo del título */
 .titulo {
     text-align: center;
-    margin-top: 100px;
-    color: white;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la entrada de número */
+.text-number {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-number {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilo del contenedor del formulario */
+.form-container {
+    margin-bottom: 20px;
 }
 
 .form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem; /* Espacio entre las celdas de la cuadrícula */
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
-.form input {
-    margin-right: 0.5rem;
-}
-
-.form-container {
-    max-width: 700px;
-    margin: 0 auto;
-    color: white;
-}
-
+/* Estilo de los elementos del formulario */
 .form-element {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
 }
 
-.text-number {
-    text-align: center;
+.form-element input {
+    margin-left: 10px;
 }
 
+/* Estilo de los botones */
 .botonSubmit {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
-p{
+.botonSubmit button {
+    background-color: #007bff;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.botonSubmit button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del texto de la contraseña generada */
+#password {
+    font-weight: bold;
+    color: #333333;
+    word-break: break-all;
+}
+
