@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+    <title>Password Generator</title>
+</head>
+<header>
+    <nav>
+        <div class="logo"><a href="index.html">🏠</a></div>
+
+        <div class="barnav">
+            <div><a href="index.html">Generador</a></div>
+            <div><a href="#">Coming soon</a></div>
+            <div><a href="#">Coming soon</a></div>
+            <div><a href="#">Coming soon</a></div>
+            <div class="signup"><a href="signup.html">Sign up</a></div>
+        </div>
+        
+    </nav>
+</header>
+<body>
+    <div class="contenido">
+        <h1 class="titulo">Generator Password</h1>
+        <p class="text-number">Introduce un número entre 8 y 18
+            <input id="form-number" type="number" name="numero" min="8" max="18" placeholder="8">
+        </p>
+        <div class="form-container">
+            <form class="form">
+                <div class="form-element item1">¿Quieres Mayúsculas?
+                    <input id="mycheckbox-uppercase" type="checkbox" checked="checked">
+                </div>
+                <div class="form-element item2">¿Quieres Minúsculas?
+                    <input id="mycheckbox-lowercase" type="checkbox" checked="checked">
+                </div>
+                <div class="form-element item3">¿Quieres Números?
+                    <input id="mycheckbox-numbers" type="checkbox" checked="checked">
+                </div>
+                <div class="form-element item4">¿Quieres Símbolos?
+                    <input id="mycheckbox-symbols" type="checkbox" checked="checked">
+                </div>
+            </form>
+            <p class="botonSubmit">
+                <button id="generate-password" type="button">Generar</button>
+            </p>
+            <p class="botonSubmit">
+                <button id="copy-password" type="button">Copiar al Portapapeles</button>
+            </p>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">La contraseña es: <p id="password" style="text-align:center; margin-top:20px;"></p></p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

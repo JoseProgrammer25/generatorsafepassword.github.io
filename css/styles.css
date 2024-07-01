@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+body {
+    background-color: #494949;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: #333333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+nav .logo {
+    font-size: 34px;
+    margin-left: 30px;
+}
+
+nav .logo a {
+    text-decoration: none;
+}
+
+nav .barnav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin-right: 30px;
+}
+
+nav .barnav div {
+    padding: 10px 20px;
+}
+
+nav .barnav div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav .barnav div:hover {
+    cursor: pointer;
+    background: rgb(182, 221, 255);
+}
+
+nav .barnav .signup:hover  {
+    background: #aff1a2;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem; /* Espacio entre las celdas de la cuadrícula */
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.form input {
+    margin-right: 0.5rem;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+}
+
+.form-element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-number {
+    text-align: center;
+}
+
+.botonSubmit {
+    text-align: center;
+    margin-top: 40px;
+}
+
+p{
+    color: white;
+}
