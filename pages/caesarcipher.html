@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/stylesCifrado.css">
+        <script src="../js/cifradoCesar.js"></script>
+        <title>Caesar Cipher</title>
+    </head>
+    <body>
+        <header>
+            <h1>Crypto Tools Free</h1>
+            <div class="option">
+                <div class="animacion">
+                    <a href="generatorPassword.html">Safe Password</a>
+                    <a href="caesarcipher.html">Caesar Cipher</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form id="caesarCipherForm">
+                <label for="inputText">Texto a Cifrar:</label>
+                <input type="text" id="inputText">
+                
+                <label for="shiftAmount">Desplazamiento:</label>
+                <input type="range" id="shiftAmount" name="shiftAmount" min="1" max="25" value="1">
+                <span id="shiftValue">1</span>
+                
+                <label for="outputText">Texto Cifrado:</label>
+                <input type="text" id="outputText" readonly>
+                
+                <button type="button" id="encryptButton">Cifrar</button>
+            </form>
+        </main>
+    </body>
+</html>

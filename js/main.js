@@ -1,28 +1,27 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('generate-password').addEventListener('click', () => {
-        const length = parseInt(document.getElementById('form-number').value);
+        const length = parseInt(document.getElementById('passwordLength').value);
         
         if (!length || length < 8 || length > 18) {
-            document.getElementById('password').innerText = "Please enter a valid number between 8 and 18.";
+            document.getElementById('generatedPassword').value = "Please enter a valid number between 8 and 18.";
             return;
         }
 
-        const checkUppercase = document.getElementById('mycheckbox-uppercase').checked;
-        const checkLowercase = document.getElementById('mycheckbox-lowercase').checked;
-        const checkNumbers = document.getElementById('mycheckbox-numbers').checked;
-        const checkSymbols = document.getElementById('mycheckbox-symbols').checked;
+        const checkUppercase = document.getElementById('includeUppercase').checked;
+        const checkLowercase = document.getElementById('includeLowercase').checked;
+        const checkNumbers = document.getElementById('includeNumbers').checked;
+        const checkSymbols = document.getElementById('includeSymbols').checked;
 
         if (checkUppercase || checkLowercase || checkNumbers || checkSymbols) {
             const password = generatePassword(length, checkUppercase, checkLowercase, checkNumbers, checkSymbols);
-            document.getElementById('password').innerText = password;
+            document.getElementById('generatedPassword').value = password;
         } else {
-            document.getElementById('password').innerText = "Please check at least one box to generate a password.";
+            document.getElementById('generatedPassword').value = "Please check at least one box to generate a password.";
         }
     });
 
     document.getElementById('copy-password').addEventListener('click', () => {
-        const passwordText = document.getElementById('password').innerText;
+        const passwordText = document.getElementById('generatedPassword').value;
         if (passwordText) {
             navigator.clipboard.writeText(passwordText).then(() => {
                 alert('Contraseña copiada al portapapeles');
@@ -30,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Falló la copia al portapapeles');
             });
         }
+    });
+
+    document.getElementById('passwordLength').addEventListener('input', function() {
+        document.getElementById('lengthValue').textContent = this.value;
     });
 });
 
